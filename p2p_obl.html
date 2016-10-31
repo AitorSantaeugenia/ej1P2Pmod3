@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>P2P Obligatoria - Módulo 3</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body background="img/background.jpg">
+	<div class="w3-container" style="text-align: CENTER;">
+	  <p>
+		<h1 id="h1"></h1>
+		<h2 id="h2">La fecha y la hora son:</h2>
+		<div id="fecha"></div>
+	  </p>
+	</div>
+
+	 <script type="text/javascript">
+	  var name = "Aitor Javier Santaeugenia Marí";
+	  var fecha = new Date();
+	  var msj;
+
+	  if      (fecha.getHours() < 7)  { msj = "Buenas noches ";}
+	  else if (fecha.getHours() < 12) { msj = "Buenos días";}
+	  else if (fecha.getHours() < 21) { msj = "Buenas tardes";}
+	  else                            { msj = "Buenas noches";}
+
+	  document.getElementById("h1").innerHTML    = msj + "," + "<br> " + name + "<br> " + "<br> ";
+	  document.getElementById("fecha").innerHTML = fecha;
+	</script> 
+	
+	<div class="w3-container" id="testing" style="
+										   border-radius: 25px;
+										   border: 2px solid #73AD21;">
+		<script>
+			  /* ---------------------------------------------------------------------------------------------------
+			  //Variables para la 2º parte del ejercicio, de mostrar todos los elementos que nos pide el ejercicio
+			  //Los alert están para pruebas de si llegan variables o no
+			  ------------------------------------------------------------------------------------------------------ */
+			  var test1 = "<strong>" + "Contenido de innerHTML de elemento identificado por &quot;id=h2&quot;: " +" </strong>" + "<br>" + document.getElementById("h2").innerHTML;
+			  //alert(test1);
+			  var test2 = "<strong>" + "Contenido de outerHTML de elemento identificado por &quot;id=h1&quot;:" + "</strong>" + document.getElementById("h1").outerHTML;
+			  //alert(test2);
+			  var test3 = "<strong>" + "Contenido de de la propiedad global: &quot;location.href&quot;:" + "</strong>" + "<br>" + location.href;
+			  //alert(test3);
+			  var test4 = "<strong>" + "Contenido de de la propiedad global: &quot;location&quot;:" + "</strong>" + "<br>" + location;
+			  //alert(test4);
+			  var test5 = "<strong>" + "Contenido de de las propiedades globales: &quot;screen.width&quot; y &quot;screen.heigth&quot;:" + "</strong>" + "<br>" + "&quot;screen.width&quot; &nbsp;=" + screen.width + "<br>" + "&quot;screen.heigth&quot; ="+screen.height;
+			  //alert(test5);
+			  
+			   document.getElementById('testing').innerHTML = "<br>" + "<br>" + test1 + "<br>" + "<br>" + test2 + test3 + "<br>" + "<br>" + test4+ "<br>" + "<br>" + test5 + "<br>" + "<br>";
+		</script> 
+		<button type="button" class="w3-btn w3-blue-grey" style="width:200px;" target="popup" onclick="window.open('popupojo.html','EjercicioP2PModulo2_Popup','width=600,height=300')">&nbsp;&nbsp;¡Ojo!, leed por favor&nbsp;&nbsp;</button>
+		<button type="button" class="w3-btn w3-blue-grey" style="width:200px;" target="popup" onclick="window.open('list_done.html','EjercicioP2PModulo2_Popup','width=800,height=800')"> Lista de ejercicios</button>
+		<br><br><br>
+	</div>
+	<br><br>
+</body>
+</html>
